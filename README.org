@@ -1,0 +1,19 @@
+* Installation
+** Anaconda
+   1. Create new environment
+      #+BEGIN_SRC sh
+        conda create -n cnoga
+      #+END_SRC
+   2. Run =setup.py=
+      #+BEGIN_SRC sh
+        python setup.py install
+      #+END_SRC
+** CPython
+   1. Create virtual environment
+      #+BEGIN_SRC sh
+        python3 -m venv .venv
+      #+END_SRC
+   2. Run =setup.py=
+      #+BEGIN_SRC sh
+        python setup.py install
+      #+END_SRC
