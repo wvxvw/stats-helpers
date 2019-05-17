@@ -26,10 +26,8 @@ parser.add_argument(
 args = parser.parse_args()
 for d in args.xls:
     for f in os.listdir(d):
-        with open(os.path.join(d, f), 'br') as s:
-            res = pd.read_excel(f, sheet_name=None)
-            if not type(res) is dict:
-                res = {'': res}
-            for k, v in res.itmes():
-                csv = '{}-{}.csv'.format(f, k)
-                v.to_csv(os.path.join(args.output, csv))
+        res = pd.read_excel(os.path.join(d, f), sheet_name=None)
+        if not isinstance(res, dict):
+            res = {os.path.splitext(f)[0]: res}
+        for k, v in res.items():
+            v.to_csv(os.path.join(args.output, k + '.csv'))
