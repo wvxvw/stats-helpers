@@ -28,10 +28,12 @@ setup(
     scripts=[
         'bin/parse_csvs.py',
         'bin/xls2csv.py',
+        'bin/compare_swatches.py',
     ],
     license='PROPRIETARY',
     install_requires=[
         'pandas >= 0.24.2',
         'xlrd >= 1.2.0',
+        'Pillow >= 6.0.0',
     ],
 )
