@@ -29,11 +29,13 @@ setup(
         'bin/parse_csvs.py',
         'bin/xls2csv.py',
         'bin/compare_swatches.py',
+        'bin/calibration-pattern.py',
     ],
     license='PROPRIETARY',
     install_requires=[
         'pandas >= 0.24.2',
         'xlrd >= 1.2.0',
         'Pillow >= 6.0.0',
+        'matplotlib >= 3.1.1',
     ],
 )
